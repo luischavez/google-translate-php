@@ -123,6 +123,7 @@ class GoogleTranslate
     public function mergeUrlParams(array $urlParams = []) : self
     {
         $this->urlParams = array_merge($this->urlParams, $urlParams);
+        return $this;
     }
 
     /**
