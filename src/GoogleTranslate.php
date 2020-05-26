@@ -114,6 +114,16 @@ class GoogleTranslate
             ->setSource($source)
             ->setTarget($target);
     }
+    
+    /**
+    * Merge an array of url params.
+    *
+    * @return GoogleTranslate
+    */
+    public function mergeUrlParams(array $urlParams = []) : self
+    {
+        $this->urlParams = array_merge($this->urlParams, $urlParams);
+    }
 
     /**
      * Set target language for translation.
